@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <title>ZFlix</title>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            fadeIn: 'fadeIn 2s ease-in-out',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Header Section -->
+  <header class="relative">
+    <video src="video/theboys.webm" autoplay muted loop class="w-full h-[80vh] object-cover absolute inset-0"></video>
+    <div class="relative z-10 bg-gradient-to-b from-gray-900/60 to-gray-900/90 w-full h-[80vh]">
+      <!-- Navbar -->
+      <nav class="flex justify-between items-center px-8 py-4">
+        <div class="flex items-center space-x-8">
+          <img src="logo.png" alt="ZFlix Logo" class="w-20">
+          <ul class="flex space-x-6 text-lg font-medium">
+            <li><a href="#" class="hover:text-red-500">HOME</a></li>
+            <li><a href="move sec/moviesection.html" class="hover:text-red-500">MOVIES</a></li>
+
+            <li><a href="New%20folder%20(4)/kids/kids.html" class="hover:text-red-500">KIDS</a></li>
+
+        </div>
+        <div class="flex items-center space-x-4">
+          <input type="text" placeholder="Search movies..." class="bg-gray-800 text-white px-4 py-2 rounded-md focus:ring-2 focus:ring-red-500 focus:outline-none">
+          <img src="user.jpg" alt="User Profile" class="w-10 h-10 rounded-full border-2 border-gray-500">
+        </div>
+      </nav>
+
+      <!-- Content Section -->
+      <div class="text-center mt-20 animate-fadeIn">
+        <h1 id="title" class="text-5xl font-extrabold mb-4" data-aos="fade-up">Money Heist</h1>
+        <p class="text-lg mb-6" data-aos="fade-up" data-aos-delay="200">A ZFlix Original Film</p>
+        <div class="flex justify-center space-x-6 mb-8" data-aos="fade-up" data-aos-delay="400">
+          <h5 id="gen" class="text-red-500 text-lg">Thriller</h5>
+          <h4 class="text-lg">2021</h4>
+          <h3 id="rate" class="text-lg flex items-center"><span>IMDB</span> <i class="bi bi-star-fill text-yellow-500 ml-1"></i> 9.6</h3>
+        </div>
+        <div class="space-x-4">
+          <a href="#" id="play" class="bg-red-500 px-6 py-2 rounded-md text-lg hover:bg-red-600 transition">Watch <i class="bi bi-play-fill"></i></a>
+          <a href="https://m2.protonmovies.top/series/425-money-heist-2017.html" id="Download" class="bg-gray-800 px-6 py-2 rounded-md text-lg hover:bg-gray-700 transition">Download <i class="bi bi-download"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Popular Movies Section -->
+  <section class="px-8 py-10">
+    <h4 class="text-2xl font-semibold mb-6">RECOMMENDED</h4>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      <!-- Movie Card -->
+      <a href="https://m.protonmovies.top/series/42-the-boys-2019.html" class="group relative rounded-lg overflow-hidden shadow-lg bg-gray-800" data-aos="zoom-in" data-aos-delay="100">
+        <img src="the boys.jpg" alt="The Boys" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col justify-end p-4 transition-opacity">
+          <h4 class="text-lg font-bold">The Boys</h4>
+          <p class="text-sm">Action, 2022</p>
+          <h3 class="flex items-center mt-1"><span>IMDB</span> <i class="bi bi-star-fill text-yellow-500 ml-1"></i> 9.6</h3>
+        </div>
+      </a>
+      <!-- Add more movie cards -->
+      <a href="https://m.protonmovies.top/movie/2297-eternals-2021.html" class="group relative rounded-lg overflow-hidden shadow-lg bg-gray-800" data-aos="zoom-in" data-aos-delay="200">
+        <img src="eternals.jpg" alt="The Boys 2" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col justify-end p-4 transition-opacity">
+          <h4 class="text-lg font-bold">Enternal</h4>
+          <p class="text-sm">Action, 2022</p>
+          <h3 class="flex items-center mt-1"><span>IMDB</span> <i class="bi bi-star-fill text-yellow-500 ml-1"></i> 9.6</h3>
+        </div>
+      </a>
+      <a href="https://m.protonmovies.top/movie/4623-stree-2-2024-pmd-2024-11-25.html" class="group relative rounded-lg overflow-hidden shadow-lg bg-gray-800" data-aos="zoom-in" data-aos-delay="200">
+        <img src="stree2.jpg" alt="The Boys 2" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col justify-end p-4 transition-opacity">
+          <h4 class="text-lg font-bold">STREE 2</h4>
+          <p class="text-sm">Horror, 2024</p>
+          <h3 class="flex items-center mt-1"><span>IMDB</span> <i class="bi bi-star-fill text-yellow-500 ml-1"></i> 9.6</h3>
+        </div>
+      </a>
+      <a href="https://m.protonmovies.top/movie/560-ant-man-2015.html" class="group relative rounded-lg overflow-hidden shadow-lg bg-gray-800" data-aos="zoom-in" data-aos-delay="200">
+        <img src="ant man.jpg" alt="The Boys 2" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col justify-end p-4 transition-opacity">
+          <h4 class="text-lg font-bold">Ant Man</h4>
+          <p class="text-sm">Action, 2022</p>
+          <h3 class="flex items-center mt-1"><span>IMDB</span> <i class="bi bi-star-fill text-yellow-500 ml-1"></i> 9.6</h3>
+        </div>
+      </a>
+      <a href="https://m.protonmovies.top/movie/2583-avengers-endgame-2019.html" class="group relative rounded-lg overflow-hidden shadow-lg bg-gray-800" data-aos="zoom-in" data-aos-delay="200">
+        <img src="avengers.jpg" alt="The Boys 2" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col justify-end p-4 transition-opacity">
+          <h4 class="text-lg font-bold">Avengers</h4>
+          <p class="text-sm">Action, 2022</p>
+          <h3 class="flex items-center mt-1"><span>IMDB</span> <i class="bi bi-star-fill text-yellow-500 ml-1"></i> 9.6</h3>
+        </div>
+      </a>
+      <a href="#" class="group relative rounded-lg overflow-hidden shadow-lg bg-gray-800" data-aos="zoom-in" data-aos-delay="200">
+        <img src="KGF.jpg" alt="kgf" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col justify-end p-4 transition-opacity">
+          <h4 class="text-lg font-bold">Kgf</h4>
+          <p class="text-sm">Action, 2018</p>
+          <h3 class="flex items-center mt-1"><span>IMDB</span> <i class="bi bi-star-fill text-yellow-500 ml-1"></i> 8.2</h3>
+        </div>
+      </a>
+    </div>
+     
+  </section>
+
+  <section class="px-8 py-10">
+    <h4 class="text-2xl font-semibold mb-6">HINDI MOVIES </h4>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      <!-- Movie Card -->
+      <a href="https://m.protonmovies.top/movie/6056-mrs-2025.html" class="group relative rounded-lg overflow-hidden shadow-lg bg-gray-800" data-aos="zoom-in" data-aos-delay="100">
+        <img src="mrs.jpg" alt="The Boys" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col justify-end p-4 transition-opacity">
+          <h4 class="text-lg font-bold">MRS</h4>
+          <p class="text-sm">Drama, 2023</p>
+          <h3 class="flex items-center mt-1"><span>MRS</span> <i class="bi bi-star-fill text-yellow-500 ml-1"></i> 9.6</h3>
+        </div>
+      </a>
+      <!-- Add more movie cards -->
+      <a href="https://m.protonmovies.top/movie/4623-stree-2-2024-pmd-2024-11-25.html" class="group relative rounded-lg overflow-hidden shadow-lg bg-gray-800" data-aos="zoom-in" data-aos-delay="200">
+        <img src="stree2.jpg" alt="The Boys 2" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col justify-end p-4 transition-opacity">
+          <h4 class="text-lg font-bold">STREE 2</h4>
+          <p class="text-sm">Horror, 2024</p>
+          <h3 class="flex items-center mt-1"><span>IMDB</span> <i class="bi bi-star-fill text-yellow-500 ml-1"></i> 9.6</h3>
+        </div>
+      </a>
+      <a href="https://m.protonmovies.top/movie/5192-jigra-2024-pmd-2025-01-09.html" class="group relative rounded-lg overflow-hidden shadow-lg bg-gray-800" data-aos="zoom-in" data-aos-delay="200">
+        <img src="jigra .jpg" alt="The Boys 2" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col justify-end p-4 transition-opacity">
+          <h4 class="text-lg font-bold">JIGRA</h4>
+          <p class="text-sm">Action, 2024</p>
+          <h3 class="flex items-center mt-1"><span>IMDB</span> <i class="bi bi-star-fill text-yellow-500 ml-1"></i> 9.6</h3>
+        </div>
+      </a>
+      <a href="https://m.protonmovies.top/movie/3387-munjya-2024-pmd-2025-01-09.html" class="group relative rounded-lg overflow-hidden shadow-lg bg-gray-800" data-aos="zoom-in" data-aos-delay="200">
+        <img src="munjya.jpg" alt="The Boys 2" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col justify-end p-4 transition-opacity">
+          <h4 class="text-lg font-bold">MUNJYA</h4>
+          <p class="text-sm">Comedy,Horror, 2024</p>
+          <h3 class="flex items-center mt-1"><span>IMDB</span> <i class="bi bi-star-fill text-yellow-500 ml-1"></i> 9.6</h3>
+        </div>
+      </a>
+      <a href="https://m.protonmovies.top/movie/5279-do-patti-2024.html" class="group relative rounded-lg overflow-hidden shadow-lg bg-gray-800" data-aos="zoom-in" data-aos-delay="200">
+        <img src="do patti.webp" alt="The Boys 2" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col justify-end p-4 transition-opacity">
+          <h4 class="text-lg font-bold">Do patti</h4>
+          <p class="text-sm">Action, 2024</p>
+          <h3 class="flex items-center mt-1"><span>IMDB</span> <i class="bi bi-star-fill text-yellow-500 ml-1"></i> 9.6</h3>
+        </div>
+      </a>
+      <a href="#" class="group relative rounded-lg overflow-hidden shadow-lg bg-gray-800" data-aos="zoom-in" data-aos-delay="200">
+        <img src="eesho.jpeg" alt="The Boys 2" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col justify-end p-4 transition-opacity">
+          <h4 class="text-lg font-bold">EESHO</h4>
+          <p class="text-sm">Action, 2022</p>
+          <h3 class="flex items-center mt-1"><span>IMDB</span> <i class="bi bi-star-fill text-yellow-500 ml-1"></i> 9.6</h3>
+        </div>
+      </a>
+    </div>
+    
+    
+     
+  </section>
+
+  
+  <section class="px-8 py-10">
+    <h4 class="text-2xl font-semibold mb-6">HOLLYWOOD </h4>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      <!-- Movie Card -->
+      <a href="https://m.protonmovies.top/series/42-the-boys-2019.html" class="group relative rounded-lg overflow-hidden shadow-lg bg-gray-800" data-aos="zoom-in" data-aos-delay="100">
+        <img src="the boys.jpg" alt="The Boys" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col justify-end p-4 transition-opacity">
+          <h4 class="text-lg font-bold">The Boys</h4>
+          <p class="text-sm">Action, 2022</p>
+          <h3 class="flex items-center mt-1"><span>IMDB</span> <i class="bi bi-star-fill text-yellow-500 ml-1"></i> 9.6</h3>
+        </div>
+      </a>
+      <!-- Add more movie cards -->
+      <a href="https://m.protonmovies.top/movie/2297-eternals-2021.html" class="group relative rounded-lg overflow-hidden shadow-lg bg-gray-800" data-aos="zoom-in" data-aos-delay="200">
+        <img src="eternals.jpg" alt="eternals" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col justify-end p-4 transition-opacity">
+          <h4 class="text-lg font-bold">Eternals</h4>
+          <p class="text-sm">Action, 2022</p>
+          <h3 class="flex items-center mt-1"><span>IMDB</span> <i class="bi bi-star-fill text-yellow-500 ml-1"></i> 9.6</h3>
+        </div>
+      </a>
+      <a href="https://m.protonmovies.top/movie/1576-spider-man-no-way-home-2021.html" class="group relative rounded-lg overflow-hidden shadow-lg bg-gray-800" data-aos="zoom-in" data-aos-delay="200">
+        <img src="spiderman.jpg" alt="Spider Man" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col justify-end p-4 transition-opacity">
+          <h4 class="text-lg font-bold">SPIDER MAN</h4>
+          <p class="text-sm">Action, 2022</p>
+          <h3 class="flex items-center mt-1"><span>IMDB</span> <i class="bi bi-star-fill text-yellow-500 ml-1"></i> 8.2</h3>
+        </div>
+      </a>
+      <a href="https://m.protonmovies.top/movie/560-ant-man-2015.html" class="group relative rounded-lg overflow-hidden shadow-lg bg-gray-800" data-aos="zoom-in" data-aos-delay="200">
+        <img src="ant man.jpg" alt="Ant Man" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col justify-end p-4 transition-opacity">
+          <h4 class="text-lg font-bold">Ant Man</h4>
+          <p class="text-sm">Action, 2022</p>
+          <h3 class="flex items-center mt-1"><span>IMDB</span> <i class="bi bi-star-fill text-yellow-500 ml-1"></i> 9.6</h3>
+        </div>
+      </a>
+      <a href="https://m.protonmovies.top/movie/2583-avengers-endgame-2019.html" class="group relative rounded-lg overflow-hidden shadow-lg bg-gray-800" data-aos="zoom-in" data-aos-delay="200">
+        <img src="avengers.jpg" alt="avengers" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col justify-end p-4 transition-opacity">
+          <h4 class="text-lg font-bold">Avengers</h4>
+          <p class="text-sm">Action, 2022</p>
+          <h3 class="flex items-center mt-1"><span>IMDB</span> <i class="bi bi-star-fill text-yellow-500 ml-1"></i> 9.6</h3>
+        </div>
+      </a>
+      <a href="#" class="group relative rounded-lg overflow-hidden shadow-lg bg-gray-800" data-aos="zoom-in" data-aos-delay="200">
+        <img src="jurassic world.jpg" alt="Jurassic world" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col justify-end p-4 transition-opacity">
+          <h4 class="text-lg font-bold">JURRASIC WORLD</h4>
+          <p class="text-sm">Action, 2015</p>
+          <h3 class="flex items-center mt-1"><span>IMDB</span> <i class="bi bi-star-fill text-yellow-500 ml-1"></i> 6.9</h3>
+        </div>
+      </a>
+    </div>
+     
+  </section>
+
+  
+  <section class="px-8 py-10">
+    <h4 class="text-2xl font-semibold mb-6">WEB SERIES </h4>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      <!-- Movie Card -->
+      <a href="https://m.protonmovies.top/series/53-panchayat-2020.html" class="group relative rounded-lg overflow-hidden shadow-lg bg-gray-800" data-aos="zoom-in" data-aos-delay="100">
+        <img src="panchatyat.jpg" alt="The Boys" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col justify-end p-4 transition-opacity">
+          <h4 class="text-lg font-bold">Panchatyat</h4>
+          <p class="text-sm">Action, 2024</p>
+          <h3 class="flex items-center mt-1"><span>IMDB</span> <i class="bi bi-star-fill text-yellow-500 ml-1"></i> 9.6</h3>
+        </div>
+      </a>
+      <!-- Add more movie cards -->
+      
+      <a href="https://m.protonmovies.top/series/6169-crime-beat-2025.html" class="group relative rounded-lg overflow-hidden shadow-lg bg-gray-800" data-aos="zoom-in" data-aos-delay="200">
+        <img src="crimebeat.jpg" alt="Crimebeat" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col justify-end p-4 transition-opacity">
+          <h4 class="text-lg font-bold">Crimebeat</h4>
+          <p class="text-sm">Action, 2020</p>
+          <h3 class="flex items-center mt-1"><span>IMDB</span> <i class="bi bi-star-fill text-yellow-500 ml-1"></i> 7.1</h3>
+        </div>
+      </a>
+      <a href="https://m.protonmovies.top/series/32-mirzapur-2018-pmd-2025-01-09.html" class="group relative rounded-lg overflow-hidden shadow-lg bg-gray-800" data-aos="zoom-in" data-aos-delay="200">
+        <img src="mirzapur.jpg" alt="Mirzapur" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col justify-end p-4 transition-opacity">
+          <h4 class="text-lg font-bold">Mirzapur</h4>
+          <p class="text-sm">Action, 2018</p>
+          <h3 class="flex items-center mt-1"><span>IMDB</span> <i class="bi bi-star-fill text-yellow-500 ml-1"></i> 9.6</h3>
+        </div>
+      </a>
+      <a href="https://protonmovies.online/series/33-paatal-lok-2020-pmd-2025-02-15.html" class="group relative rounded-lg overflow-hidden shadow-lg bg-gray-800" data-aos="zoom-in" data-aos-delay="200">
+        <img src="patalok.jpg" alt="Patal loke" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col justify-end p-4 transition-opacity">
+          <h4 class="text-lg font-bold">Patal loke </h4>
+          <p class="text-sm">Action, 2018</p>
+          <h3 class="flex items-center mt-1"><span>IMDB</span> <i class="bi bi-star-fill text-yellow-500 ml-1"></i> 9.6</h3>
+        </div>
+      </a>
+      
+     
+      
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col justify-end p-4 transition-opacity">
+          <h4 class="text-lg font-bold">Patalok</h4>
+          <p class="text-sm">Action, 2022</p>
+          <h3 class="flex items-center mt-1"><span>IMDB</span> <i class="bi bi-star-fill text-yellow-500 ml-1"></i> 9.6</h3>
+        </div>
+      </a>
+      <a href="https://m.protonmovies.top/series/421-special-ops-1-5-the-himmat-story-2021.html" class="group relative rounded-lg overflow-hidden shadow-lg bg-gray-800" data-aos="zoom-in" data-aos-delay="200">
+        <img src="specialops.jpg" alt="special ops" class="w-full h-full object-cover transition-transform group-hover:scale-105">
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col justify-end p-4 transition-opacity">
+          <h4 class="text-lg font-bold">SPECIAL OPS 1.5</h4>
+          <p class="text-sm">Action, 2022</p>
+          <h3 class="flex items-center mt-1"><span>IMDB</span> <i class="bi bi-star-fill text-yellow-500 ml-1"></i> 8.6</h3>
+        </div>
+      </a>
+    </div>
+    
+     
+  </section>
+  
+
+  <!--footer -->
+  <footer class="bg-gray-800 py-12 text-white">
+    <!-- Newsletter Signup -->
+    <div class="max-w-6xl mx-auto px-6 md:px-8 text-center lg:text-left mb-10">
+      <div class="bg-gray-700 text-white rounded-lg p-6 flex flex-col lg:flex-row items-center lg:justify-between space-y-4 lg:space-y-0 lg:space-x-6">
+        <h3 class="text-2xl font-semibold">Sign up for newsletter and get latest news and updates</h3>
+        <div class="flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
+          <input type="email" placeholder="Enter Your Email" class="py-3 px-4 rounded-full text-gray-800 focus:outline-none">
+          <a href="https://t.me/+fwKjaoo5hPIyZmY1" button class="bg-white text-blue-700 px-6 py-3 rounded-full font-semibold">Subscribe</button></a>
+         
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-6 md:px-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center lg:text-left">
+        <!-- Column 1: About -->
+        <div>
+          <h3 class="font-semibold text-lg text-white mb-4">MOVIEDEKHO</h3>
+          <p class="text-gray-400 mb-2">All types movie is avilabe in this website </p>
+          <p class="text-gray-400">Monday - Friday: 8am - 6pm<br>Saturday - Sunday: 9am - 3pm</p>
+        </div>
+    
+  <!-- Add Custom Scrollbar Hide -->
+  <style>
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init(); // Initialize AOS for animations on scroll
+  </script>
+</body>
+</html>
